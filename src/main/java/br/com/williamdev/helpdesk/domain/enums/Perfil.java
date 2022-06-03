@@ -1,15 +1,15 @@
-package br.com.williamdev.helpdesk.domains.enums;
+package br.com.williamdev.helpdesk.domain.enums;
 
-public enum Status {
-
-	ABERTO(0, "ROLE_ABERTO"),
-	ANDAMENTO(1, "ROLE_ANDAMENTO"),
-	ENCERRADO(2, "ROLE_ENCERRADO");
+public enum Perfil {
+	
+	ADMIN(0, "ROLE_ADMIN"),
+	CLIENTE(1, "ROLE_CLIENTE"),
+	TECNICO(2, "ROLE_TECNICO");
 	
 	private int codigo;
 	private String descricao;
 	
-	private Status(int codigo, String descricao) {
+	private Perfil(int codigo, String descricao) {
 		this.codigo = codigo;
 		this.descricao = descricao;
 	}
@@ -33,8 +33,7 @@ public enum Status {
 			}
 		}
 		
-		throw new IllegalArgumentException("Status inválido");
+		throw new IllegalArgumentException("Perfil inválido");
 		
 	}
-	
 }
